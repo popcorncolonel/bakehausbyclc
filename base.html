@@ -1,0 +1,26 @@
+<!doctype html>
+    <head>
+        <title>Bakehaus by CLC</title>
+        <!--
+        <link rel="icon" type="image/png" href="/images/favicon.png">
+        -->
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head>
+    <body class="bluebackground">
+        <a href="/">
+        <img class="titleimg" src="/images/bakehaus.jpg"/>
+        </a>
+        <div class="parent">
+        <div class="navlinks">
+            <button type="button" onclick="location.href='/location'" class="btn">Location</button>
+            <button type="button" onclick="location.href='/menu'" class="btn">View Menu</button>
+            <button type="button" onclick="location.href='/contact'" class="btn">Contact</button>
+        </div>
+        </div>
+        <div class="content">
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>
+
