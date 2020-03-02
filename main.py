@@ -12,23 +12,13 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 )
 
 
-class LocationHandler(webapp2.RequestHandler):
+class MissionHandler(webapp2.RequestHandler):
     '''
-    Location page with the address and a map.
-    '''
-    def get(self):
-        template_values = {}
-        template = JINJA_ENVIRONMENT.get_template('location.html')
-        self.response.write(template.render(template_values))
-
-
-class MenuHandler(webapp2.RequestHandler):
-    '''
-    Menu page. Figure out if it should just be a pdf or a menu in a database.
+    Gives a description of the mission.
     '''
     def get(self):
         template_values = {}
-        template = JINJA_ENVIRONMENT.get_template('menu.html')
+        template = JINJA_ENVIRONMENT.get_template('mission.html')
         self.response.write(template.render(template_values))
 
 
@@ -54,8 +44,6 @@ class MainHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     (r'/', MainHandler),
-    (r'/location', LocationHandler),
-    (r'/menu', MenuHandler),
+    (r'/mission', MissionHandler),
     (r'/contact', ContactHandler),
 ], debug=True)
-

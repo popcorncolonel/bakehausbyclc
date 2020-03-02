@@ -1,8 +1,11 @@
+:root {
+  --bh-blue: #0f2065;
+  --bh-yellow: #eb9c52;
+  --bh-white: #edebeb;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
-    /*
-    font-size: 14px;
-    */
     height: 100%;
 }
 
@@ -10,28 +13,21 @@ a:visited {
     color: blue;
 }
 
-/*
-.content {
-    border-top: 2px solid #000;
-    padding-top: 5px;
-}
-*/
-
 .content {
     width: 95%;
-    min-width: 750px;
     /*
+    min-width: 750px;
     width: 600px;
     */
     margin: 0 auto;
     padding: 10px;
-    background-color: white;
+    background-color: var(--bh-white);
 }
 
 .centertext {
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
     text-align: center;
 }
 
@@ -48,7 +44,7 @@ a:visited {
 }
 
 .bluebackground {
-    background-color: #1783f2;
+    background-color: var(--bh-blue);
 }
 
 .navlinks {
@@ -67,3 +63,6 @@ a:visited {
     padding-left: 15px;
 }
 
+ul {
+    list-style-position: inside;
+}

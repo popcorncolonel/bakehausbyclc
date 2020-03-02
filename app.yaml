@@ -5,22 +5,28 @@ threadsafe: yes
 handlers:
 - url: /images
   static_dir: images
+  secure: always
+
+- url: /menus
+  static_dir: menus
+  secure: always
 
 - url: /style.css
   static_files: style.css
   upload: style.css
+  secure: always
 
 - url: /
   script: main.app
+  secure: always
 
-- url: /location
+- url: /mission
   script: main.app
-
-- url: /menu
-  script: main.app
+  secure: always
 
 - url: /contact
   script: main.app
+  secure: always
 
 libraries:
 - name: webapp2
