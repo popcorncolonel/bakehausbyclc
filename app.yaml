@@ -24,6 +24,10 @@ handlers:
   script: main.app
   secure: always
 
+- url: /news
+  script: main.app
+  secure: always
+
 - url: /contact
   script: main.app
   secure: always

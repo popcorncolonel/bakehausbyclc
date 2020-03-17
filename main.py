@@ -31,6 +31,15 @@ class ContactHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('contact.html')
         self.response.write(template.render(template_values))
 
+class NewsHandler(webapp2.RequestHandler):
+    '''
+    News info page.
+    '''
+    def get(self):
+        template_values = {}
+        template = JINJA_ENVIRONMENT.get_template('news.html')
+        self.response.write(template.render(template_values))
+
 
 class MainHandler(webapp2.RequestHandler):
     '''
@@ -45,5 +54,6 @@ class MainHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     (r'/', MainHandler),
     (r'/mission', MissionHandler),
+    (r'/news', NewsHandler),
     (r'/contact', ContactHandler),
 ], debug=True)
