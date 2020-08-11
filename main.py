@@ -21,6 +21,15 @@ class MissionHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('mission.html')
         self.response.write(template.render(template_values))
 
+class InternalHandler(webapp2.RequestHandler):
+    '''
+    Internal
+    '''
+    def get(self):
+        template_values = {}
+        template = JINJA_ENVIRONMENT.get_template('menus/internal.html')
+        self.response.write(template.render(template_values))
+
 
 class ContactHandler(webapp2.RequestHandler):
     '''
